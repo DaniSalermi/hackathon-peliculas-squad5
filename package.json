@@ -1,0 +1,19 @@
+{
+  "name": "hackathon-peliculas-squad5",
+  "version": "1.0.0",
+  "description": "Proyecto hackathon peliculas final Common Core Squad 5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaniSalermi/hackathon-peliculas-squad5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaniSalermi/hackathon-peliculas-squad5/issues"
+  },
+  "homepage": "https://github.com/DaniSalermi/hackathon-peliculas-squad5#readme"
+}
