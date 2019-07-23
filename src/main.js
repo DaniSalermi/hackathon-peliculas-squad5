@@ -13,7 +13,7 @@ function listadoPeliculas(buscar) {
 }
 
 function mostrarDetallePelicula(id) {
-  fetch(`https://yts.lt/api/v2/list_movies.json?minimun_rating=8`)
+  fetch(`http://www.omdbapi.com/?apikey=3f6e7988&i=${id}`)
     .then(success => {
       return success.json();
     })
@@ -25,4 +25,4 @@ function mostrarDetallePelicula(id) {
     });
 }
 
-mostrarDetallePelicula("happy");
+listadoPeliculas("happy");
