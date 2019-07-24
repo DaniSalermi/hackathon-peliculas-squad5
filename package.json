@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DaniSalermi/hackathon-peliculas-squad5/issues"
   },
-  "homepage": "https://github.com/DaniSalermi/hackathon-peliculas-squad5#readme"
+  "homepage": "https://github.com/DaniSalermi/hackathon-peliculas-squad5#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
 }
