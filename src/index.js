@@ -6,11 +6,13 @@ console.log(typeOfComparison);
 let movieSearch1 = "";
 let movieSearch2 = "";
 
-document.getElementById("compareButton").addEventListener("click", () => {
+document.getElementById("searchMoviesButton").addEventListener("click", () => {
   movieSearch1 = document.getElementById("movieSearch1").value;
   movieSearch2 = document.getElementById("movieSearch2").value;
   console.log(movieSearch1);
   console.log(movieSearch2);
-  listadoPeliculas(movieSearch1, typeOfComparison);
-  listadoPeliculas(movieSearch2, typeOfComparison);
+  let firstMovieResults = listadoPeliculas(movieSearch1, typeOfComparison);
+  let secondMovieRsults = listadoPeliculas(movieSearch2, typeOfComparison);
+
+  createButtons(firstMovieResults);
 });

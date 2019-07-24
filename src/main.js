@@ -7,6 +7,7 @@ function listadoPeliculas(title, type) {
     })
     .then(movies => {
       console.log(movies);
+      // movies.Search.forEach(e => createButtons(movies));
       // movies.Search.forEach(e => mostrarDetallePelicula(e.imdbID));
     })
     .catch(error => {
@@ -25,4 +26,12 @@ function mostrarDetallePelicula(id) {
     .catch(error => {
       console.log(error);
     });
+}
+
+function createButtons(movies) {
+  // for (let i = 1; i < movies.Search.length; i++) {
+  //   let btn = document.createElement("button");
+  //   btn.innerHTML = movies.Search[i].title;
+  // }
+  console.log(movies);
 }
