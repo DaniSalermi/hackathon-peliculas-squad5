@@ -98,6 +98,7 @@ img {
   transform: translate(0, -10px);
 }
 
+
 @media (max-width: 1025px) {
   .home-hero .title {
     color: white;
@@ -144,6 +145,7 @@ img {
     margin-top: 200px;
     margin-bottom: 40px;
     align-items: flex-start;
+
   }
 
   .home-hero .buttons {
