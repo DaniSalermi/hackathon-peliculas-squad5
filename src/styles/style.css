@@ -73,7 +73,7 @@ img {
 
 .home-hero .title {
   color: white;
-  font-size: 10em;
+  font-size: 6em;
   margin-top: 100px;
 }
 
@@ -97,7 +97,6 @@ img {
 .home-hero .buttons:hover {
   transform: translate(0, -10px);
 }
-
 
 @media (max-width: 1025px) {
   .home-hero .title {
@@ -145,7 +144,6 @@ img {
     margin-top: 200px;
     margin-bottom: 40px;
     align-items: flex-start;
-
   }
 
   .home-hero .buttons {
