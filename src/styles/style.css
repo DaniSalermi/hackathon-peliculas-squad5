@@ -3,21 +3,71 @@ body {
   padding: 0;
   font-family: "Didact Gothic", sans-serif;
 }
-.fa-1x {
-  font-size: 1.5rem;
+
+main {
+  padding: 0 2em;
 }
-.navbar-toggler.toggler-example {
-  cursor: pointer;
+img {
+  width: 100%;
 }
-.dark-blue-text {
-  color: #0a38f5;
+
+.logo {
+  max-width: 200px;
 }
-.dark-pink-text {
-  color: #ac003a;
+
+.slide,
+.carousel {
+  max-height: 200px;
 }
-.dark-amber-text {
-  color: #ff6f00;
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
 }
-.dark-teal-text {
-  color: #004d40;
+
+.movie-list > button {
+  margin: 0 1em 1em 0;
+}
+
+.select-movie {
+  margin: 2em 0;
+}
+
+.poster img {
+  width: 200px;
+}
+
+.movieInfo .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.movie-compare {
+  margin-bottom: 40px;
+  display: none;
+}
+
+@media (max-width: 450px) {
+  .movieInfo {
+    width: 50%;
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+
+  .list-group-item {
+    padding: 0;
+  }
+
+  .card-body {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+
+  .search {
+    margin-bottom: 20px;
+  }
 }

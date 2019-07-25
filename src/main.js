@@ -1,37 +1,33 @@
 function listadoPeliculas(title, type) {
-  fetch(
+  return fetch(
     `http://www.omdbapi.com/?apikey=3f6e7988&s=${title}&type=${type}&page=1`
   )
     .then(success => {
       return success.json();
     })
     .then(movies => {
-      console.log(movies);
-      // movies.Search.forEach(e => createButtons(movies));
-      // movies.Search.forEach(e => mostrarDetallePelicula(e.imdbID));
+      return movies;
     })
     .catch(error => {
-      console.log(error);
+      console.error(error);
     });
 }
 
 function mostrarDetallePelicula(id) {
-  fetch(`http://www.omdbapi.com/?apikey=3f6e7988&i=${id}`)
+  return fetch(`http://www.omdbapi.com/?apikey=3f6e7988&i=${id}`)
     .then(success => {
       return success.json();
     })
     .then(movies => {
-      console.log(movies);
+      return movies;
     })
     .catch(error => {
-      console.log(error);
+      console.error(error);
     });
 }
 
-function createButtons(movies) {
-  // for (let i = 1; i < movies.Search.length; i++) {
-  //   let btn = document.createElement("button");
-  //   btn.innerHTML = movies.Search[i].title;
-  // }
-  console.log(movies);
+function compareRating(movie1, movie2) {
+  parseInt(movie1.imdbRating) > parseInt(movie2.imdbRating)
+    ? alert(movie1.Title + ": " + movie1.imdbRating)
+    : alert(movie2.Title + ": " + movie2.imdbRating);
 }
