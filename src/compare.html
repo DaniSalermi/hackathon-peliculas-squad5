@@ -6,7 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>The winners</title>
     <link rel="shortcut icon" href="images/ShortLogo.PNG" type="image/x-icon" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap"
@@ -14,123 +19,207 @@
     />
   </head>
   <body>
-      <header>
-          <nav class="navbar navbar-dark dark-blue navbar-expand-md">
-            <a class="navbar-brand" href="index.html">
-              <img class="logo" src="images/Logo.PNG" alt="logo" />
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-    
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto"> 
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item  active">
-                    <a class="nav-link" href="compare.html?compare=movie">Compare Movies</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="compare.html?compare=series">Compare Series</a>
-                    </li>
-                </ul>
-                
-              </div>
-              
-        </header>
+    <header>
+      <nav class="navbar navbar-dark dark-blue navbar-expand-md">
+        <a class="navbar-brand" href="index.html">
+          <img class="logo" src="images/Logo.PNG" alt="logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item  active">
+              <a class="nav-link" href="compare.html?compare=movie"
+                >Compare Movies</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="compare.html?compare=series"
+                >Compare Series</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <main>
-      <section class="search">
+      <div class="search">
         <div class="row">
           <div class="col-md-6">
-              <div class="form-group">
-                  <label for="movieSearch1">First Movie</label>
-                  <input type="text" class="form-control" value="Harry Potter" id="movieSearch1" name="movieSearch1" aria-describedby="movie1Help" placeholder="What movie do you get recommended?">
-                  <small id="movie1Help" class="form-text text-muted">We recommend: Harry Potter.</small>
-                </div>
+            <div class="form-group">
+              <label for="movieSearch1">First Movie</label>
+              <input
+                type="text"
+                class="form-control"
+                value="Harry Potter"
+                id="movieSearch1"
+                name="movieSearch1"
+                aria-describedby="movie1Help"
+                placeholder="What movie do you get recommended?"
+              />
+              <small id="movie1Help" class="form-text text-muted"
+                >We recommend: Harry Potter.</small
+              >
+            </div>
           </div>
           <div class="col-md-6">
-              <div class="form-group">
-                  <label for="movieSearch2">Second Movie</label>
-                  <input type="text" class="form-control" value="Toy story" id="movieSearch2" name="movieSearch2" aria-describedby="movie2Help" placeholder="Movie to compare against">
-                  <small id="movie2Help" class="form-text text-muted">Do you hear about: Toy Story.</small>
-                </div>
+            <div class="form-group">
+              <label for="movieSearch2">Second Movie</label>
+              <input
+                type="text"
+                class="form-control"
+                value="Toy story"
+                id="movieSearch2"
+                name="movieSearch2"
+                aria-describedby="movie2Help"
+                placeholder="Movie to compare against"
+              />
+              <small id="movie2Help" class="form-text text-muted"
+                >Do you hear about: Toy Story.</small
+              >
+            </div>
           </div>
           <div class="col-md-12">
-              <button type="button" class="btn btn-primary btn-lg active btn-yellow" id="searchMoviesButton">Search</button>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg active btn-yellow"
+              id="searchMoviesButton"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section class="select-movie" id="selectMovie">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Select to compare</h3>
+            <br /><br />
+          </div>
+          <div class="col-md-6">
+            <div id="nameMovies1" class="movie-list"></div>
+            <hr />
+          </div>
+
+          <div class="col-md-6">
+            <div id="nameMovies2" class="movie-list"></div>
+            <hr />
           </div>
         </div>
       </section>
 
-      <section class="select-movie" id="selectMovie"> 
-      <div class="row">
-        <div class="col-md-12">
-          <h3>Select to compare</h3>
-          <br><br>
-        </div>
-        <div class="col-md-6">
-            <div id="nameMovies1" class="movie-list">
-
-              </div>
-              <hr>
-        </div>
-        
-        <div class="col-md-6">
-            <div id="nameMovies2" class="movie-list">
-        
-              </div>
-              <hr>
-        </div>
-      </div>
-    </section>
-
-    <section class="movie-compare" id="movieCompare">
-      <div class="row">
-        <div class="col movieInfo">
+      <div class="movie-compare" id="movieCompare">
+        <div class="row">
+          <div class="col movieInfo">
             <div class="card" id="movieDisplay1">
-                <img class="card-img-top" src="" id="poster1" alt="Card image cap">
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><strong>Title</strong><br><span id="title1"></span></li>
-                        <li class="list-group-item"><strong>Rating</strong><br><span id="rating1"></span></li>
-                        <li class="list-group-item"><strong>Genre</strong><br><span id="genre1"></span></li>
-                        <li class="list-group-item"><strong>Actors</strong><br><span id="actors1"></span></li>
-                        <li class="list-group-item"><strong>Director</strong><br><span id="director1"></span></li>
-                        <li class="list-group-item"><strong>Rated</strong><br><span id="rated1"></span></li>
-                        <li class="list-group-item"><strong>Duration</strong><br><span id="duration1"></span></li>
-                        <li class="list-group-item"><strong>Release</strong><br><span id="release1"></span></li>
-                      </ul>
-                  
-                </div>
+              <img
+                class="card-img-top"
+                src="#"
+                id="poster1"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <strong>Title</strong><br /><span id="title1"></span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Rating</strong><br /><span id="rating1"></span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Genre</strong><br /><span id="genre1"></span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Actors</strong><br /><span id="actors1"></span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Director</strong><br /><span id="director1"></span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Rated</strong><br /><span id="rated1"></span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Duration</strong><br /><span id="duration1"></span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Release</strong><br /><span id="release1"></span>
+                  </li>
+                </ul>
               </div>
-          
-        </div>
-        <div class="col movieInfo">
+            </div>
+          </div>
+          <div class="col movieInfo">
             <div class="card" id="movieDisplay2">
-                <img class="card-img-top" src="" id="poster2" alt="Card image cap">
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><strong>Title</strong><br><span id="title2"></span></li>
-                        <li class="list-group-item"><strong>Rating</strong><br><span id="rating2"></span></li>
-                        <li class="list-group-item"><strong>Genre</strong><br><span id="genre2"></span></li>
-                        <li class="list-group-item"><strong>Actors</strong><br><span id="actors2"></span></li>
-                        <li class="list-group-item"><strong>Director</strong><br><span id="director2"></span></li>
-                        <li class="list-group-item"><strong>Rated</strong><br><span id="rated2"></span></li>
-                        <li class="list-group-item"><strong>Duration</strong><br><span id="duration2"></span></li>
-                        <li class="list-group-item"><strong>Release</strong><br><span id="release2"></span></li>
-                      </ul>
-                  
-                </div>
+              <img
+                class="card-img-top"
+                src="#"
+                id="poster2"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <strong>Title</strong><br /><span id="title2"></span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Rating</strong><br /><span id="rating2"></span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Genre</strong><br /><span id="genre2"></span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Actors</strong><br /><span id="actors2"></span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Director</strong><br /><span id="director2"></span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Rated</strong><br /><span id="rated2"></span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Duration</strong><br /><span id="duration2"></span>
+                  </li>
+                  <li class="list-group-item">
+                    <strong>Release</strong><br /><span id="release2"></span>
+                  </li>
+                </ul>
               </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
     </main>
     <script src="main.js"></script>
     <script src="index.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
