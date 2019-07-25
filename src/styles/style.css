@@ -2,10 +2,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Didact Gothic", sans-serif;
+  background-color: #25282a;
+  color: #25282a;
 }
 
 main {
-  padding: 0 2em;
+  padding: 0 5em;
 }
 img {
   width: 100%;
@@ -13,11 +15,6 @@ img {
 
 .logo {
   max-width: 200px;
-}
-
-.slide,
-.carousel {
-  max-height: 200px;
 }
 
 .movie-list {
@@ -47,11 +44,66 @@ img {
   display: none;
 }
 
-@media (max-width: 450px) {
+.highlight {
+  box-shadow: 1px -1px 17px 0px rgba(255, 209, 0, 1);
+}
+
+.btn-yellow {
+  background-color: rgba(255, 209, 0, 1) !important;
+  border: none;
+  color: #25282a !important;
+  font-weight: bold;
+}
+
+.search {
+  margin-bottom: 40px;
+}
+
+.home-hero {
+  width: 100%;
+  height: calc(100vh - 78px);
+  background-image: url("../images/carousel1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home-hero .title {
+  color: white;
+  font-size: 10em;
+}
+
+.home-hero .call-to-action {
+  display: flex;
+}
+
+.home-hero .buttons {
+  background-color: #f9ff60;
+  background-image: linear-gradient(315deg, #f9ff60 0%, #ffef77 74%);
+  border: none;
+  color: #25282a !important;
+  font-weight: bold;
+  margin: 0 1em;
+  padding: 2px 20px;
+  border-radius: 20px;
+  font-size: 3em;
+  transition: all 0.4s;
+}
+
+.home-hero .buttons:hover {
+  transform: translate(0, -10px);
+}
+
+@media (max-width: 520px) {
+  main {
+    padding: 0 2em;
+  }
   .movieInfo {
     width: 50%;
-    padding-right: 3px;
-    padding-left: 3px;
+    padding-right: 4px;
   }
 
   .list-group-item {
@@ -69,5 +121,17 @@ img {
 
   .search {
     margin-bottom: 20px;
+  }
+
+  .home-hero .title {
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    line-height: 1em;
+    margin-bottom: 10px;
+  }
+
+  .home-hero .buttons {
+    font-size: 1.5em;
   }
 }

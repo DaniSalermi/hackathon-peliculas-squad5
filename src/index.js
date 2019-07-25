@@ -42,30 +42,41 @@ document
   });
 
 nameMovies1.addEventListener("click", async e => {
-  e["srcElement"].className = "btn btn-sm btn-success";
+  if (e["srcElement"].className === "btn btn-sm") {
+    e["srcElement"].className = "btn btn-sm btn-success";
+  }
   let id = e["srcElement"].value;
   movie1 = await mostrarDetallePelicula(id);
-  console.log(movie1, movie2);
   if (movie1 && movie2) {
-    compareRating(movie1, movie2);
-    showMovies(movie1, "1");
-    showMovies(movie2, "2");
+    display(movie1, movie2);
   }
 });
 
 nameMovies2.addEventListener("click", async e => {
-  e["srcElement"].className = "btn btn-sm btn-success";
+  if (e["srcElement"].className === "btn btn-sm") {
+    e["srcElement"].className = "btn btn-sm btn-success";
+  }
+
   let id = e["srcElement"].value;
   movie2 = await mostrarDetallePelicula(id);
-  console.log(movie1, movie2);
   if (movie1 && movie2) {
-    compareRating(movie1, movie2);
-    showMovies(movie1, "1");
-    showMovies(movie2, "2");
-    movieCompare.style.display = "block";
-    selectMovie.style.display = "none";
+    display(movie1, movie2);
   }
 });
+
+function display(movie1, movie2) {
+  showMovies(movie1, "1");
+  showMovies(movie2, "2");
+  movieCompare.style.display = "block";
+  selectMovie.style.display = "none";
+  if (compareRating(movie1, movie2) === 1) {
+    movieDisplay1.className = "card highlight";
+    movieDisplay2.className = "card";
+  } else {
+    movieDisplay1.className = "card";
+    movieDisplay2.className = "card highlight";
+  }
+}
 
 function showMovies(movie, id) {
   document.getElementById("poster" + id).setAttribute("src", movie.Poster);

@@ -27,7 +27,5 @@ function mostrarDetallePelicula(id) {
 }
 
 function compareRating(movie1, movie2) {
-  parseInt(movie1.imdbRating) > parseInt(movie2.imdbRating)
-    ? alert(movie1.Title + ": " + movie1.imdbRating)
-    : alert(movie2.Title + ": " + movie2.imdbRating);
+  return parseInt(movie1.imdbRating) > parseInt(movie2.imdbRating) ? 1 : 2;
 }

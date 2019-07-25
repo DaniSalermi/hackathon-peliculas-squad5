@@ -15,20 +15,20 @@
   </head>
   <body>
       <header>
-          <nav class="navbar navbar-light light-blue lighten-4 navbar-expand-md">
+          <nav class="navbar navbar-dark dark-blue navbar-expand-md">
             <a class="navbar-brand" href="index.html">
-              <img class="logo" src="images/Logo.PNG" alt="logo" />
+              <img class="logo" src="images/Logo.png" alt="logo" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
     
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto"> 
+                  <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item  active">
                     <a class="nav-link" href="compare.html?compare=movie">Compare Movies</a>
                   </li>
                   <li class="nav-item">
@@ -37,6 +37,7 @@
                 </ul>
                 
               </div>
+              
         </header>
 
     <main>
@@ -57,7 +58,7 @@
                 </div>
           </div>
           <div class="col-md-12">
-              <button type="button" class="btn btn-primary btn-lg active" id="searchMoviesButton">Buscar Películas</button>
+              <button type="button" class="btn btn-primary btn-lg active btn-yellow" id="searchMoviesButton">Search</button>
           </div>
         </div>
       </section>
@@ -87,7 +88,7 @@
     <section class="movie-compare" id="movieCompare">
       <div class="row">
         <div class="col movieInfo">
-            <div class="card">
+            <div class="card" id="movieDisplay1">
                 <img class="card-img-top" src="" id="poster1" alt="Card image cap">
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
@@ -106,7 +107,7 @@
           
         </div>
         <div class="col movieInfo">
-            <div class="card">
+            <div class="card" id="movieDisplay2">
                 <img class="card-img-top" src="" id="poster2" alt="Card image cap">
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
