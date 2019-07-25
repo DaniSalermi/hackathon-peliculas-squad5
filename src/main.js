@@ -1,6 +1,6 @@
 function listadoPeliculas(title, type) {
   return fetch(
-    `http://www.omdbapi.com/?apikey=3f6e7988&s=${title}&type=${type}&page=1`
+    `https://www.omdbapi.com/?apikey=3f6e7988&s=${title}&type=${type}&page=1`
   )
     .then(success => {
       return success.json();
@@ -14,7 +14,7 @@ function listadoPeliculas(title, type) {
 }
 
 function mostrarDetallePelicula(id) {
-  return fetch(`http://www.omdbapi.com/?apikey=3f6e7988&i=${id}`)
+  return fetch(`https://www.omdbapi.com/?apikey=3f6e7988&i=${id}`)
     .then(success => {
       return success.json();
     })
